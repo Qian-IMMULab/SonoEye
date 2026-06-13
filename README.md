@@ -1,4 +1,4 @@
-SonoEye: Ocular Ultrasound Foundation Model Utilities
+# SonoEye: Ocular Ultrasound Foundation Model Utilities
 
 This repository contains PyTorch research code for ocular B-scan ultrasound image-text modeling, image-level disease evaluation, Eye-RADS-style risk mapping, and report generation.
 
@@ -11,7 +11,7 @@ The disease and risk-category terminology follows the project reference paper st
 
 This code is intended for research and engineering experiments only. It is not a clinical diagnosis system.
 
-Repository Contents
+# Repository Contents
 
 This repository contains entrypoints and modules for:
 
@@ -27,7 +27,7 @@ CSV-to-text report generation using English disease labels, tumor subtype labels
 Custom input pipeline
 Dataset loading, report tokenization, and image-text processor wrappers for the USCLIP model.
 
-Environment
+# Environment
 
 Install Python dependencies with:
 
@@ -44,7 +44,7 @@ torchvision==0.23.0+cu129
 
 If your CUDA version is different, install the matching PyTorch and torchvision builds from the official PyTorch index, then install the remaining packages from `requirements.txt`.
 
-Data
+# Data
 
 Training dataset input
 
@@ -199,7 +199,7 @@ report_text = generate_report(
 process_csv_to_reports("input.csv", "reports")
 ```
 
-Typical Workflow
+# Typical Workflow
 
 Step 1: Install dependencies.
 
@@ -235,19 +235,19 @@ Step 5: Generate English reports from a CSV file.
 python report_generate.py
 ```
 
-Known Setup Notes
+# Known Setup Notes
 
 - This repository is research code and currently uses direct script-level path variables rather than command-line arguments.
 - Several scripts contain `local_path` placeholders that must be replaced before running.
 - `EyeReportTokenizer` must be connected to a real Hugging Face tokenizer before fresh training.
 
-License
+# License
 
 AGPL-3.0 License: See the LICENSE file for more details.
 
 Copyright 2026 IMMU Lab (for modified portions)
 
-Disclaimer
+# Disclaimer
 
 This repository contains research code provided "AS IS" without warranty of any kind. By using this code, you expressly agree that:
 
